@@ -1,7 +1,7 @@
 {
   "name": "@kevinrodbe/test-deploy-npm",
-  "version": "1.0.4",
-  "repository": "kevinrodbeapp/test-deploy-npm",
+  "version": "1.0.5",
+  "repository": "kevinrodbe/test-deploy-npm",
   "description": "Repository to manage the kevinrodbe Design System",
   "main": "./dist/index.js",
   "module": "./dist/index.modern.js",
