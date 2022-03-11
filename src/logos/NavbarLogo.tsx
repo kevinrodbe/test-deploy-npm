@@ -1,6 +1,7 @@
+import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import XLogoHorizontal from './x-logo-horizontal.svg';
+import XLogoHorizontal from './x-logo-horizontal';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -11,7 +12,5 @@ const useStyles = makeStyles(() => ({
 export const NavbarLogo = () => {
   const classes = useStyles();
 
-  return (
-    <img alt="xepelin-horizontal-logo" className={classes.root} height={26.48} src={XLogoHorizontal.src} width={94.1} />
-  );
+  return <XLogoHorizontal className={classes.root} height={26.48} width={94.1} />;
 };
