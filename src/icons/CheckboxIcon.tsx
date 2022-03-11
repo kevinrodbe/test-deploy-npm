@@ -1,5 +1,4 @@
 import { SvgIcon, styled } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { theme } from '../theme';
 
@@ -65,14 +64,14 @@ export const CheckboxIcon = (props) => {
   );
 };
 
-CheckboxIcon.defaultProps = {
-  dataQa: '',
-  isChecked: false,
-  style: {},
-};
+// CheckboxIcon.defaultProps = {
+//   dataQa: '',
+//   isChecked: false,
+//   style: {},
+// };
 
-CheckboxIcon.propTypes = {
-  dataQa: PropTypes.string,
-  isChecked: PropTypes.bool,
-  style: PropTypes.objectOf(Object),
-};
+// CheckboxIcon.propTypes = {
+//   dataQa: PropTypes.string,
+//   isChecked: PropTypes.bool,
+//   style: PropTypes.objectOf(Object),
+// };

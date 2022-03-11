@@ -1,5 +1,4 @@
 import { SvgIcon, styled } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { theme } from '../theme';
 
@@ -61,12 +60,12 @@ export const MoneyIcon = (props) => {
   );
 };
 
-MoneyIcon.defaultProps = {
-  isSelected: false,
-  style: {},
-};
+// MoneyIcon.defaultProps = {
+//   isSelected: false,
+//   style: {},
+// };
 
-MoneyIcon.propTypes = {
-  isSelected: PropTypes.bool,
-  style: PropTypes.objectOf(Object),
-};
+// MoneyIcon.propTypes = {
+//   isSelected: PropTypes.bool,
+//   style: PropTypes.objectOf(Object),
+// };

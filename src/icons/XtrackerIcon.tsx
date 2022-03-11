@@ -1,5 +1,4 @@
 import { SvgIcon, styled } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { theme } from '../theme';
 
@@ -59,12 +58,12 @@ export const XtrackerIcon = (props) => {
   );
 };
 
-XtrackerIcon.defaultProps = {
-  isSelected: false,
-  style: {},
-};
+// XtrackerIcon.defaultProps = {
+//   isSelected: false,
+//   style: {},
+// };
 
-XtrackerIcon.propTypes = {
-  isSelected: PropTypes.bool,
-  style: PropTypes.objectOf(Object),
-};
+// XtrackerIcon.propTypes = {
+//   isSelected: PropTypes.bool,
+//   style: PropTypes.objectOf(Object),
+// };
