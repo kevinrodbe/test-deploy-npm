@@ -1,5 +1,5 @@
 import { CircularProgress, Button as MUIButton } from '@material-ui/core';
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { ButtonProps } from './Button.types';
 

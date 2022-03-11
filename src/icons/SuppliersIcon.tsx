@@ -1,6 +1,6 @@
 import { SvgIcon, styled } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import React from 'react';
+
 import { theme } from '../theme';
 
 const CustomSvgIcon = styled(SvgIcon)((props: any) => ({
