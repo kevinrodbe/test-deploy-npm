@@ -19,8 +19,17 @@ jobs:
       - run: git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Install deps (with cache)
         uses: bahmutov/npm-install@v1
-      - name: Bumping
+      - name: Bumping 🆙
         run: npm run patch
+      - name: Building StoryBook 🏗
+        run: npm run build-storybook
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: storybook-static
