@@ -1,12 +1,13 @@
 import { SvgIcon, styled } from '@material-ui/core';
 
+import { IconExtendedProps, IconProps } from './types';
 import { theme } from '../theme';
 
-const CustomSvgIcon = styled(SvgIcon)((props: any) => ({
+const CustomSvgIcon = styled(SvgIcon)((props: IconProps) => ({
   ...props.style,
 }));
 
-export const XtrackerIcon = (props) => {
+export const XtrackerIcon = (props: IconExtendedProps) => {
   const { style, isSelected } = props;
 
   if (isSelected) {

@@ -1,14 +1,15 @@
 import { SvgIcon, styled } from '@material-ui/core';
 
+import { IconExtendedProps, IconProps } from './types';
 import { theme } from '../theme';
 
-const CustomSvgIcon = styled(SvgIcon)((props: any) => ({
+const CustomSvgIcon = styled(SvgIcon)((props: IconExtendedProps) => ({
   height: 16,
   width: 16,
   ...props.style,
 }));
 
-export const CheckboxIcon = (props) => {
+export const CheckboxIcon = (props: IconProps) => {
   const { style, isChecked, dataQa } = props;
 
   if (isChecked) {
@@ -63,15 +64,3 @@ export const CheckboxIcon = (props) => {
     </CustomSvgIcon>
   );
 };
-
-// CheckboxIcon.defaultProps = {
-//   dataQa: '',
-//   isChecked: false,
-//   style: {},
-// };
-
-// CheckboxIcon.propTypes = {
-//   dataQa: PropTypes.string,
-//   isChecked: PropTypes.bool,
-//   style: PropTypes.objectOf(Object),
-// };

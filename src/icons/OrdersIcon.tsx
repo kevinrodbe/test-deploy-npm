@@ -2,13 +2,15 @@ import React from 'react';
 
 import { SvgIcon, styled } from '@material-ui/core';
 import PropTypes from 'prop-types';
+
+import { IconExtendedProps, IconProps } from './types';
 import { theme } from '../theme';
 
-const CustomSvgIcon = styled(SvgIcon)((props: any) => ({
+const CustomSvgIcon = styled(SvgIcon)((props: IconExtendedProps) => ({
   ...props.style,
 }));
 
-export const OrdersIcon = (props) => {
+export const OrdersIcon = (props: IconProps) => {
   const { style, isSelected } = props;
 
   if (isSelected) {
