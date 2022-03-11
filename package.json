@@ -17,7 +17,7 @@
     "build": "run-s clean:build build:ds",
     "clean:build": "rimraf dist",
     "deploy:story": "gh-pages -d storybook-static",
-    "lint": "eslint src --max-warnings=0 --fix",
+    "lint": "eslint --max-warnings=0 --fix",
     "major": "release-it -V --ci -i major",
     "minor": "release-it -V --ci -i minor",
     "patch": "release-it -V --ci -i patch",
