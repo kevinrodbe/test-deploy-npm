@@ -19,23 +19,11 @@ jobs:
       - run: git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Install deps (with cache)
         uses: bahmutov/npm-install@v1
-
-  Bumping:
-    name: Bumping version
-    needs: Configuration
-    runs-on: ubuntu-latest
-    steps:
       - name: Bumping by minor 🆙
         run: npm run minor
       - run: git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  DeploymentStory:
-    name: StoryBook Deployment
-    needs: Configuration
-    runs-on: ubuntu-latest
-    steps:
       - name: Building StoryBook 🏗
         run: npm run build:story
         env:
@@ -45,12 +33,6 @@ jobs:
         with:
           branch: gh-pages
           folder: storybook-static
-
-  DeploymentPackage:
-    name: GH Package Deployment
-    needs: Configuration
-    runs-on: ubuntu-latest
-    steps:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
