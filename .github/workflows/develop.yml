@@ -25,6 +25,10 @@ jobs:
     needs: Configuration
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: develop
       - name: Bumping by patch 🆙
         run: npm run patch
       - run: git push

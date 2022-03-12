@@ -25,8 +25,8 @@ jobs:
     needs: Configuration
     runs-on: ubuntu-latest
     steps:
-      - name: Bumping by patch 🆙
-        run: npm run patch
+      - name: Bumping by minor 🆙
+        run: npm run minor
       - run: git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
