@@ -34,15 +34,19 @@ jobs:
         with:
           branch: gh-pages
           folder: storybook-static
-      - name: Build Package 🎁
+      - name: Build Package 🗳
         run: npm run build
-      - name: Deploy Package 🚀
+      - name: Generate Release 🎉
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: false
-          title: "Last Building 🎁 🔥"
+          title: "Last Building 🎁"
           files: |
             LICENSE.txt
             *.jar
+      - name: Deploy Package 🚀
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
