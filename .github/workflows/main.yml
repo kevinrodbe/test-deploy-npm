@@ -14,12 +14,13 @@ jobs:
           ref: main
       - uses: actions/setup-node@v2
         with:
-          node-version: 'lts/*'
+          node-version: 14
+          registry-url: https://npm.pkg.github.com/
       - run: git config user.name "${GITHUB_ACTOR}"
       - run: git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-      - name: Install deps (with cache)
+      - name: Install deps (with cache) ⏬
         uses: bahmutov/npm-install@v1
-      - name: Bumping by minor 🆙
+      - name: Bumping by minor 📦 🆙
         run: npm run minor
       - run: git push
         env:
@@ -28,11 +29,14 @@ jobs:
         run: npm run build:story
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Deploy 🚀
+      - name: Deploy GH Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           folder: storybook-static
-      - run: npm publish
+      - name: Build Package 🎁
+        run: npm run build
+      - name: Deploy Package 🚀
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
