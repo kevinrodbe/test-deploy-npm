@@ -1,12 +1,13 @@
 import { SvgIcon, styled } from '@material-ui/core';
-import PropTypes from 'prop-types';
+
+import { IconExtendedProps, IconProps } from './types';
 import { theme } from '../theme';
 
-const CustomSvgIcon = styled(SvgIcon)((props: any) => ({
+const CustomSvgIcon = styled(SvgIcon)((props: IconExtendedProps) => ({
   ...props.style,
 }));
 
-export const PaymentsIcon = (props) => {
+export const PaymentsIcon = (props: IconProps) => {
   const { style, isSelected } = props;
 
   if (isSelected) {
@@ -58,12 +59,12 @@ export const PaymentsIcon = (props) => {
   );
 };
 
-PaymentsIcon.defaultProps = {
-  isSelected: false,
-  style: {},
-};
+// PaymentsIcon.defaultProps = {
+//   isSelected: false,
+//   style: {},
+// };
 
-PaymentsIcon.propTypes = {
-  isSelected: PropTypes.bool,
-  style: PropTypes.objectOf(Object),
-};
+// PaymentsIcon.propTypes = {
+//   isSelected: PropTypes.bool,
+//   style: PropTypes.objectOf(Object),
+// };

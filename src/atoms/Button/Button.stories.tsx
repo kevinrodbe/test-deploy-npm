@@ -16,7 +16,7 @@ const Template: Story<ButtonProps> = ({ children, ...props }) => <Button {...pro
 export const Normal = Template.bind({});
 Normal.args = {
   children: 'Confirmar',
-  isLoading: true,
+  isLoading: false,
   variant: 'outlined',
 };
 
