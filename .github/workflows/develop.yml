@@ -29,6 +29,8 @@ jobs:
         with:
           fetch-depth: 0
           ref: develop
+      - name: Install deps (with cache)
+        uses: bahmutov/npm-install@v1
       - name: Bumping by patch 🆙
         run: npm run patch
       - run: git push
