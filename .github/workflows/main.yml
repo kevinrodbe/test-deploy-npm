@@ -52,7 +52,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: v${{ env.PACKAGE_VERSION }}
           prerelease: false
-          title: Last Building 🎁
+          title: v${{ env.PACKAGE_VERSION }} 🎁
       - name: Deploy Package 🚀
         run: npm publish
         env:
