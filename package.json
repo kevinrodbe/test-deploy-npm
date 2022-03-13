@@ -1,6 +1,6 @@
 {
   "name": "@kevinrodbe/test-deploy-npm",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "repository": "kevinrodbe/test-deploy-npm",
   "description": "Repository to manage the kevinrodbe Design System",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
   "types": "./dist/src/index.d.ts",
   "source": "./src/index.ts",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "build:c": "npm run clean:build && rollup -c",
