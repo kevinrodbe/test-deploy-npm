@@ -1,4 +1,4 @@
-name: Deploying Main
+name: Deploying Main Branch
 on:
   push:
     branches:
@@ -14,10 +14,10 @@ jobs:
           ref: main
       - uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 14.15.0
           registry-url: https://npm.pkg.github.com/
-      - run: git config user.name "${GITHUB_ACTOR}"
-      - run: git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - run: git config user.name ${GITHUB_ACTOR}
+      - run: git config user.email ${GITHUB_ACTOR}@users.noreply.github.com
       - name: Install deps (with cache) ⏬
         uses: bahmutov/npm-install@v1
       - name: Bumping by minor 📦 🆙
@@ -45,14 +45,14 @@ jobs:
           github_repo: ${{ github.repository }}
           version: ${{ env.PACKAGE_VERSION }}
           git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v"
+          git_tag_prefix: v
       - name: Generate Release 🎉
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: v${{ env.PACKAGE_VERSION }}
           prerelease: false
-          title: "Last Building 🎁"
+          title: Last Building 🎁
       - name: Deploy Package 🚀
         run: npm publish
         env:
