@@ -14,7 +14,7 @@ jobs:
           ref: main
       - uses: actions/setup-node@v2
         with:
-          node-version: 14.15.0
+          node-version: 14.18.2
           registry-url: https://npm.pkg.github.com/
       - run: git config user.name ${GITHUB_ACTOR}
       - run: git config user.email ${GITHUB_ACTOR}@users.noreply.github.com
