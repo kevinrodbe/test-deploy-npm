@@ -36,16 +36,23 @@ jobs:
           folder: storybook-static
       - name: Build Package 🗳
         run: npm run build
+      - name: Get Package Version 🏷
+        run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
+      - name: Tagging 🔖
+        uses: pkgdeps/git-tag-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_repo: ${{ github.repository }}
+          version: ${{ env.PACKAGE_VERSION }}
+          git_commit_sha: ${{ github.sha }}
+          git_tag_prefix: "v"
       - name: Generate Release 🎉
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: ${{ env.PACKAGE_VERSION }}
           prerelease: false
           title: "Last Building 🎁"
-          files: |
-            LICENSE.txt
-            *.jar
       - name: Deploy Package 🚀
         run: npm publish
         env:
