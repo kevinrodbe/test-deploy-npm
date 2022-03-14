@@ -1,5 +1,6 @@
 import {
   CommonColors,
+  PaletteOptions,
   SimplePaletteColorOptions,
   TypeBackground,
   TypeText,
@@ -15,7 +16,7 @@ interface XText extends Partial<TypeText> {
   light: string;
 }
 
-export interface DefaultPaletteOptions {
+export interface DefaultPaletteOptions extends PaletteOptions {
   primary: SimplePaletteColorOptions;
   secondary: SimplePaletteColorOptions;
   tertiary: SimplePaletteColorOptions;
