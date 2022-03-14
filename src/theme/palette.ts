@@ -1,7 +1,6 @@
-import { DefaultPaletteOptions } from './types';
 import { colors } from './colors';
 
-export const palette: DefaultPaletteOptions = {
+export const palette = {
   background: {
     default: colors.background.default,
     gradient: colors.background.gradient,

@@ -58,13 +58,3 @@ export const XtrackerIcon = (props: IconExtendedProps) => {
     </CustomSvgIcon>
   );
 };
-
-// XtrackerIcon.defaultProps = {
-//   isSelected: false,
-//   style: {},
-// };
-
-// XtrackerIcon.propTypes = {
-//   isSelected: PropTypes.bool,
-//   style: PropTypes.objectOf(Object),
-// };

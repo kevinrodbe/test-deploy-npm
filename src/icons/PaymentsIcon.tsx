@@ -58,13 +58,3 @@ export const PaymentsIcon = (props: IconProps) => {
     </CustomSvgIcon>
   );
 };
-
-// PaymentsIcon.defaultProps = {
-//   isSelected: false,
-//   style: {},
-// };
-
-// PaymentsIcon.propTypes = {
-//   isSelected: PropTypes.bool,
-//   style: PropTypes.objectOf(Object),
-// };

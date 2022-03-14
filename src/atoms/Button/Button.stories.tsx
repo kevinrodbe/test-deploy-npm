@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 
 import { Button } from './Button';
-import { ButtonProps } from './Button.types';
+import { ButtonProps } from './types';
 
 export default {
   args: {

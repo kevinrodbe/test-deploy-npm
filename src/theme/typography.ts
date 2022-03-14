@@ -1,6 +1,4 @@
-import { TypographyOptions } from '@material-ui/core/styles/createTypography';
-
-export const typography: TypographyOptions = {
+export const typography = {
   body1: {
     fontSize: 13,
     fontWeight: 400,

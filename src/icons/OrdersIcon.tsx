@@ -1,7 +1,4 @@
-import React from 'react';
-
 import { SvgIcon, styled } from '@material-ui/core';
-import PropTypes from 'prop-types';
 
 import { IconExtendedProps, IconProps } from './types';
 import { theme } from '../theme';
@@ -138,13 +135,4 @@ export const OrdersIcon = (props: IconProps) => {
       />
     </CustomSvgIcon>
   );
-};
-OrdersIcon.defaultProps = {
-  isSelected: false,
-  style: {},
-};
-
-OrdersIcon.propTypes = {
-  isSelected: PropTypes.bool,
-  style: PropTypes.objectOf(Object),
 };

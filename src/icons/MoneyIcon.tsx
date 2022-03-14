@@ -60,13 +60,3 @@ export const MoneyIcon = (props: IconProps) => {
     </CustomSvgIcon>
   );
 };
-
-// MoneyIcon.defaultProps = {
-//   isSelected: false,
-//   style: {},
-// };
-
-// MoneyIcon.propTypes = {
-//   isSelected: PropTypes.bool,
-//   style: PropTypes.objectOf(Object),
-// };

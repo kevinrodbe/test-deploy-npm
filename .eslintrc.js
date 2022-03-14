@@ -69,16 +69,6 @@ module.exports = {
     ],
     'react/prop-types': 1,
     semi: 0,
-    'sort-imports': [
-      'error',
-      {
-        allowSeparatedGroups: true,
-        ignoreCase: false,
-        ignoreDeclarationSort: false,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      },
-    ],
     'sort-keys': ['error', 'asc', { caseSensitive: true, minKeys: 2, natural: false }],
   },
   settings: {
@@ -89,7 +79,7 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        paths: ['.'],
+        paths: ['src'],
       },
     },
   },

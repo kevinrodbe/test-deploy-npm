@@ -1,5 +1,4 @@
 import { SvgIcon, styled } from '@material-ui/core';
-import PropTypes from 'prop-types';
 
 import { IconExtendedProps, IconProps } from './types';
 import { theme } from '../theme';
@@ -66,14 +65,4 @@ export const HomeIcon = (props: IconProps) => {
       />
     </CustomSvgIcon>
   );
-};
-
-HomeIcon.defaultProps = {
-  isSelected: false,
-  style: {},
-};
-
-HomeIcon.propTypes = {
-  isSelected: PropTypes.bool,
-  style: PropTypes.objectOf(Object),
 };
