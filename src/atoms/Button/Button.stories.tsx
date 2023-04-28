@@ -8,7 +8,7 @@ export default {
     children: 'Descargar',
   },
   component: Button,
-  title: 'Button',
+  title: 'v1/Button',
 } as Meta<typeof Button>;
 
 const Template: Story<ButtonProps> = ({ children, ...props }) => <Button {...props}>{children}</Button>;
